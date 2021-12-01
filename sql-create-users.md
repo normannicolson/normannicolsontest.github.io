@@ -1,6 +1,6 @@
 # Sql Create Users
 
-Sql AzureSql
+May 2018
 
 > Sql script for creating users.
 

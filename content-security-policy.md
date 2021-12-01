@@ -1,5 +1,7 @@
 # Content Security Policy
 
+Jun 2017
+
 > Implementing a content security policy.
 
 ```
@@ -31,11 +33,13 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 ```
 
 Allow any src resource from only https but any domain.
+
 ```
 Content-Security-Policy: default-src https:
 ```
 
 Only allow src resources from same site 
+
 ```
 Content-Security-Policy: default-src https://example.com
 ```
