@@ -95,6 +95,7 @@ az rest --method GET --uri "https://graph.microsoft.com/v1.0/applications" --hea
 ```
 
 ```
+[
   [
     "**********",
     "**********",
