@@ -2,7 +2,7 @@
 
 Sep 2022
 
-> Create docker container with Azure cli pre-installed  
+> Create docker container with Azure cli pre-installed.
 
 Create container with interactive terminal with mapped volume.
 
@@ -26,7 +26,7 @@ Local azure-cli folder is *mapped* to *export* folder in container so having the
 bin     dev     etc     export  home    lib     lib64   media   mnt     opt     proc    root    run     sbin    srv     sys     tmp     usr     var
 ```
 
-Windows local volume folder located at   \\\\wsl$\docker-desktop-data\data\docker\volumes  
+Windows local volume folder located at \\\\wsl$\docker-desktop-data\data\docker\volumes  
 
 Exit terminal using exit keyword, this will stop container:
 ```
