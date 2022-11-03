@@ -58,7 +58,7 @@ EXPOSE 1433
 
 WORKDIR /var/opt/mssql/data
 
-# ccopy into container
+# copy into container
 COPY create-db.sh /var/opt/mssql/data
 
 # use the ENTRYPOINT command to execute the script and start SQL Server
