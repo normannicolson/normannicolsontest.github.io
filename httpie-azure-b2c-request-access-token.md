@@ -19,7 +19,3 @@ Mix with Jq (https://stedolan.github.io/jq) to parse and extract responses for e
 ```
 http --form POST https://login.microsoftonline.com/{tennant id}/oauth2/v2.0/token grant_type="client_credentials" client_id="{client id}" client_secret="{client secret}" scope="https://graph.microsoft.com/.default" | jq -r ".access_token"
 ```
-
-
-
-
