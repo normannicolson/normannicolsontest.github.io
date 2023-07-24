@@ -50,5 +50,5 @@ fi
 Use
 
 ```
-#.\create-proxy-identity-experience-framework-app.sh name
+#.\create-proxy-identity-experience-framework-app.sh tenant
 ```
