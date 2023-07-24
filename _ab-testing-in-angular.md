@@ -4,7 +4,7 @@ Aug 2020
 
 > AB testing is the act of testing a hypothesis (a hypothesis in the scenario is a proposed explanation about a piece of functionality, product, flow or UI etc based on limited data). AB testing provides empirical evidence for informed decision making comparing functionality A versus functionality B even product A versus product B.
 
-AB testing enables experimentation and measurement for example a checkout experience, imagine we are online coffee shop, we roast and sell our beens online:
+AB testing enables experimentation and measurement for example a checkout experience, imagine you are online coffee shop, you roast and sell your beens online:
 
 - Hypothesis more users will purchase our beens with a guest payment experience.  
 - Functionality A requires signup before purchase.
@@ -17,13 +17,13 @@ Second User gets functionality B
 Third User gets functionality A
 Fourth User gets functionality B and so on
 
-## How we Measure
+## How you Measure
 
-Depending on what we are measuring our experiment can start as soon as someone visits our site. In our example we are comparing checkout experiences we start on checkout button click.
+Depending on what you are measuring our experiment can start as soon as someone visits our site. In our example you are comparing checkout experiences you start on checkout button click.
 
-When we click checkout our session is routed to functionality A normally what we already use (sign in or sign up) or functionality B (sign in or guest checkout).
+When you click checkout our session is routed to functionality A normally what you already use (sign in or sign up) or functionality B (sign in or guest checkout).
 
-We measure events across both functionalities:
+You measure events across both functionalities:
 
 Guest checkout will allow users users to signup when email and delivery information is captured without needing to capture any additional information.
 
