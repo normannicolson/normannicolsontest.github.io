@@ -12,9 +12,9 @@ First step to achieve data continuous delivery is source controlling data storag
 
 ## Schema 
 
-Rolling back a database schema is more complex than rolling back a codebase (to rollback a codebase we publish out the historic version), to rollback a database we need to maintain data integrity, map data between columns rolling forward and back migrating data between columns, typically rollback is not performed.
+Rolling back a database schema is more complex than rolling back a codebase (to rollback a codebase you publish out the historic version), to rollback a database you need to maintain data integrity, map data between columns rolling forward and back migrating data between columns, typically rollback is not performed.
 
-Rollout and rollback can be achieved using visual studio database project (but has its gotchas as will drop columns and lose data not what we want), Entity Framework code first migrations compare previous migration to current code first migration and creates new migration to rollout and rollback, rollout and rollback information is stored in database.
+Rollout and rollback can be achieved using visual studio database project (but has its gotchas as will drop columns and lose data not what you want), Entity Framework code first migrations compare previous migration to current code first migration and creates new migration to rollout and rollback, rollout and rollback information is stored in database.
 
 This technique database maintains rollout and rollback information within database, this information will be used to rollback. For example database version 8 was published but an error occurred and version 7 was published to roll back, version 7 has no knowledge of how to rollback database version 8, database contains this information and is used to rollback.     
 
@@ -101,4 +101,4 @@ Transactional data is populated by application usage, for test environments on d
 - Populate with Application master data
 - Populate with Environment/Customer master data
 
-With no sql we need to maintain version of schema in code, including version in storage enabling migration of data on demand. 
+With no sql you need to maintain version of schema in code, including version in storage enabling migration of data on demand. 

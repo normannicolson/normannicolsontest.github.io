@@ -102,6 +102,12 @@ Create scenario
 Create /features/hello-world.feature file 
 
 ```
+mkdir features
+cd features
+touch hello-world.feature
+```
+
+```
 Feature: Hello world
 
 Scenario: Navigate to homepage     
@@ -139,7 +145,15 @@ Failures:
 0m00.002s (executing steps: 0m00.000s)
 ```
 
-Create /src/steps/navigate.ts to contain your navigation steps. 
+Create /src/steps/navigate.ts to contain your navigation steps.
+
+```
+mkdir src/steps
+
+cd  src/steps
+
+touch navigate.ts
+```
 
 ```
 import { Given, When, Then, DataTable } from '@cucumber/cucumber';
@@ -173,4 +187,4 @@ Warnings:
 PS C:\Repositories\TFS\cucumberjs-typescript> 
 ```
 
-Application ready to add hooks and browser support such as playwright
+Application ready to add hooks and browser support such as playwright.

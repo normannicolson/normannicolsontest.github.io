@@ -36,5 +36,5 @@ foreach ($file in $orgFiles)
 }
 
 #Replace string in filenames 
-Get-ChildItem -Filter orgStringFilter -Recurse | % { Rename-Item -Path $_.PSPath -NewName $_.Name.replace($orgString, $newString)}
+Get-ChildItem -Filter $orgStringFilter -Recurse | % { Rename-Item -Path $_.PSPath -NewName $_.Name.replace($orgString, $newString)}
 ```
