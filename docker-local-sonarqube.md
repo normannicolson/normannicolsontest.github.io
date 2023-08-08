@@ -40,7 +40,7 @@ dotnet tool install --global dotnet-sonarscanner
 
 Update projects in folder with sonarscanner SonarProject configs
 ```
-dotnet sonarscanner begin /k:"Appeals" /d:sonar.host.url="http://localhost:9000"  /d:sonar.login="sqp_9de0eeab88e3e8954a173181fe21ad5ae31df75b"
+dotnet sonarscanner begin /k:"Posts" /d:sonar.host.url="http://localhost:9000" /d:sonar.login="sqp_9de0eeab88e3e8954a173181fe21ad5ae31df75b"
 ```
 
 Build solution
