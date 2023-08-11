@@ -232,6 +232,7 @@ docker container rm -f nameofapi
 
 docker container ls -a
 ```
-
-
+ 
+```
 http get http://localhost:54801/hello
+```
