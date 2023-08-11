@@ -47,7 +47,7 @@ fi
 #read -p "Press enter to continue"
 ```
 
-Use
+## Use
 
 ```
 #.\create-proxy-identity-experience-framework-app.sh tenant

@@ -38,6 +38,7 @@ fi
 ```
 
 ## Use
+
 ```
 .\create-identity-experience-framework-app.sh tenant
 ```
