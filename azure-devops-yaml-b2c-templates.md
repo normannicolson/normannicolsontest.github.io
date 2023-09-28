@@ -1,6 +1,6 @@
 # Azure Dev Ops Yml Build steps for B2c Templates
 
-Oct 2018
+Dec 2021
 
 > Yaml Azure DevOps B2c Template build pipleline
 
