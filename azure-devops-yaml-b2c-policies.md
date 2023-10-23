@@ -1,10 +1,10 @@
-# Azure Dev Ops Yml Build
+# Azure Dev Ops Yml Build steps for B2c Policies
 
 Oct 2018
 
 > Yaml Azure DevOps B2c Policy build pipleline
 
-Build B2c Policy into build artefacts.
+Build B2c Policies into build artefacts.
 
 ```
 - task: CopyFiles@2
