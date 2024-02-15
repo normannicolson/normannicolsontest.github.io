@@ -47,7 +47,6 @@ package.json
 }
 ```
 
-
 ```
 - script: |
     cd src/templates
