@@ -55,5 +55,5 @@ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password@123' -p 1433:1433 -d mcr.
 Connection String 
 
 ```
-Data Source=localhost,1433;Initial Catalog=SQADataContextB2c;integrated security=false;MultipleActiveResultSets=True;User Id=sa;Password=Password@123;TrustServerCertificate=true;
+Data Source=localhost,1433;Initial Catalog=DataContext;integrated security=false;MultipleActiveResultSets=True;User Id=sa;Password=Password@123;TrustServerCertificate=true;
 ```
