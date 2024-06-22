@@ -4,7 +4,7 @@ Jun 24
 
 > Use openssl to create self signed certificate
 
-Create Local Certificate Authority RSA private key
+Create Local Certificate Authority private key
 
 ```
 openssl genrsa -out nlist-ca.key 4096
@@ -67,7 +67,13 @@ openssl req -text -in nlist-domain.csr -noout -verify
 ```
 
 ```
-openssl x509 -req -days 180 -CA nlist-ca.crt -CAkey nlist-ca.key -CAcreateserial -in nlist-domain.csr  -out nlist-domain.crt
+openssl x509 -req -days 180 -CA nlist-ca.crt -CAkey nlist-ca.key -CAcreateserial -in nlist-domain.csr -out nlist-domain.crt
+```
+
+or use certificate authority private key for self signed ```-signkey nlist-ca.key ```
+
+```
+openssl x509 -req -days 180 -in nlist-domain.csr -signkey nlist-ca.key -out nlist-domain.crt
 ```
 
 Viewing Certificate Information
@@ -83,3 +89,11 @@ openssl req -pubkey -in nlist-domain.csr -noout | openssl sha256
 
 openssl x509 -pubkey -in nlist-domain.crt -noout | openssl sha256
 ```
+
+Verify certificate chain
+
+```
+openssl verify -CAfile nlist-ca.crt nlist-domain.crt
+```
+
+openssl verify nlist-domain.crt
