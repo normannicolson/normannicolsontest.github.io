@@ -66,6 +66,12 @@ Copy file contents to upload
 cat ~/.ssh/nlist.pub | pbcopy .
 ```
 
+Add Identity
+
+```
+ssh-add ~/.ssh/nlist
+```
+
 Key can be entered into GitHub or Bitbucket SSH keys 
 
 - https://github.com/settings/keys
