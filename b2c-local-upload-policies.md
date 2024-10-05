@@ -23,5 +23,5 @@ Copy-Item demo\*.xml $outputDirName
 
 $Folder = Join-Path $PSScriptRoot "\${outputDirName}\"
 
-.\b2c-upload-policies.ps1 -ClientID '' -ClientSecret '' -TenantId 'sqaauthcentreb2cdev.onmicrosoft.com' -Folder $Folder -Files 'TrustFrameworkBaseDev.xml,TrustFrameworkLocalizationDev.xml,TrustFrameworkExtensionsDev.xml,SignUpOrSigninDev.xml'
+.\b2c-upload-policies.ps1 -ClientID '' -ClientSecret '' -TenantId 'example.onmicrosoft.com' -Folder $Folder -Files 'TrustFrameworkBaseDev.xml,TrustFrameworkLocalizationDev.xml,TrustFrameworkExtensionsDev.xml,SignUpOrSigninDev.xml'
 ```

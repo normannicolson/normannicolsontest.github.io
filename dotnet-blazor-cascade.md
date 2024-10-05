@@ -45,7 +45,7 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 
-namespace SQA.Asset.UI.Client.Components
+namespace Nlist.Asset.UI.Client.Components
 {
     public partial class CascadingAssetUser : IDisposable
     {
