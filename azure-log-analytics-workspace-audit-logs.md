@@ -61,3 +61,51 @@ let dailyStatsPercentage = dailyStats
 
 dailyStatsPercentage;
 ```
+
+Get top Issue an id_token to the application users 
+
+``` 
+let startDate = todatetime('2025-06-14T09:00:00Z');
+let endDate = todatetime('2025-06-14T10:00:00Z');
+
+AuditLogs
+| where Resource == 'Microsoft.aadiam'
+| where TimeGenerated between (startDate .. endDate)
+| where Category == 'Authentication' and OperationName == 'Issue an id_token to the application'
+| extend UserId = tostring(TargetResources[0].id)
+| extend Hour = bin(TimeGenerated, 1h)
+| summarize TotalTokens=count() by Hour, UserId
+```
+
+Requests 
+
+```
+let currentDate = todatetime('2025-07-02T00:00:00Z');
+let currentEndDate = todatetime('2025-07-02T23:59:59Z');
+let previousDate = todatetime('2025-07-01T00:00:00Z');
+let previousEndDate = todatetime('2025-07-01T23:59:59Z');
+
+let currentDay = AppRequests
+| where TimeGenerated between (currentDate .. currentEndDate)
+| where Url startswith "http://example.com/api/"
+| where Name != "POST Endpoint"
+| where Success == false
+| summarize 
+    RequestCount = sum(ItemCount),
+    AvgDuration = round(avg(DurationMs), 2),
+    MaxDuration = max(DurationMs),
+    MinDuration = min(DurationMs) by Name, bin(TimeGenerated, 1h)
+| extend Day = "Current";
+
+let previousDay = AppRequests
+| where TimeGenerated between (previousDate .. previousEndDate)
+| where Url startswith "http://example.com/api/"
+| summarize 
+    RequestCount = count(),
+    AvgDuration = round(avg(DurationMs), 2),
+    MaxDuration = max(DurationMs),
+    MinDuration = min(DurationMs) by Name, bin(TimeGenerated, 1h)
+| extend Day = "Previous";
+
+currentDay
+```
