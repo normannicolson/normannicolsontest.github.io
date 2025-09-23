@@ -109,3 +109,27 @@ let previousDay = AppRequests
 
 currentDay
 ```
+
+```
+AuditLogs
+| where TimeGenerated between (todatetime('2025-02-01T00:00:00Z') .. todatetime('2025-03-01T00:00:00Z'))
+| where OperationName == "Send SMS to verify phone number"
+| summarize count()
+```
+
+MAU
+```
+AuditLogs
+| where Resource == 'Microsoft.aadiam'
+| where TimeGenerated between (todatetime('2025-03-01T00:00:00Z') .. todatetime('2025-04-01T00:00:00Z'))
+| where Category == 'Authentication' and OperationName == 'Issue an id_token to the application'
+| extend UserId = tostring(TargetResources[0].id)
+| summarize UniqueUsers = dcount(UserId)
+
+AuditLogs
+| where Resource == 'Microsoft.aadiam'
+| where TimeGenerated between (todatetime('2025-03-01T00:00:00Z') .. todatetime('2025-04-01T00:00:00Z'))
+| where Category == 'Authentication'
+| extend UserId = tostring(TargetResources[0].id)
+| summarize UniqueUsers = dcount(UserId)
+```
